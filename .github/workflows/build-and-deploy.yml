@@ -27,13 +27,7 @@ jobs:
               run: npm ci
             - name: Build
               run: npm run build
+            - name: Delete old build
+              run: ssh violet@violet-server-rm "rm -rf /var/www/portfolio/*"
             - name: Move files
-              uses: appleboy/scp-action@v0.1.7
-              with:
-                  host: "100.94.206.123"
-                  username: violet
-                  password: "1234"
-                  port: 22
-                  source: dist/*
-                  target: /var/www/portfolio
-                  rm: true
+              run: scp -r dist violet@violet-server-vm:/var/www/portfolio/
