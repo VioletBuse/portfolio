@@ -32,7 +32,7 @@ jobs:
               with:
                   host: violet-server-vm
                   username: violet
-                  password: 1234
+                  password: "1234"
                   port: 22
                   source: dist/*
                   target: /var/www/portfolio
