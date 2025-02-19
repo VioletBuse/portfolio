@@ -28,6 +28,6 @@ jobs:
             - name: Build
               run: npm run build
             - name: Delete old build
-              run: ssh violet@violet-server-rm "rm -rf /var/www/portfolio/*"
+              run: ssh violet@100.94.206.123 "rm -rf /var/www/portfolio/*"
             - name: Move files
-              run: scp -r dist violet@violet-server-vm:/var/www/portfolio/
+              run: scp -r dist violet@100.94.206.123:/var/www/portfolio/
