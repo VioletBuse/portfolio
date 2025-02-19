@@ -30,7 +30,7 @@ jobs:
             - name: Move files
               uses: appleboy/scp-action@v0.1.7
               with:
-                  host: violet-server-vm
+                  host: "100.94.206.123"
                   username: violet
                   password: "1234"
                   port: 22
